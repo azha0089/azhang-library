@@ -3,12 +3,10 @@
     <section class="wrap">
       <button @click="showMessage = !showMessage">Toggle Message</button>
   
-      <!-- showMessage 为 true 时渲染这个段落 -->
       <p v-if="showMessage" class="message success">
         ✨ You're a Vue superstar! ✨
       </p>
   
-      <!-- 否则渲染这个段落 -->
       <p v-else class="message">
         Click the button to see a message.
       </p>
@@ -18,7 +16,6 @@
   <script setup>
   import { ref } from 'vue'
   
-  // Step 1: 定义布尔状态
   const showMessage = ref(false)
   </script>
   

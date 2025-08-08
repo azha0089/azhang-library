@@ -12,13 +12,12 @@
   
   <script setup>
   import { computed } from 'vue'
-  import authors from '../assets/json/authors.json' // 确保路径正确
+  import authors from '../assets/json/authors.json'
   
-  // Activity 3.3：拍平所有作者的著名作品标题
   const allFamousWorks = computed(() =>
     authors.flatMap(author =>
       (author.famousWorks ?? []).map(work => work.title)
-    ).filter(Boolean) // 过滤空标题
+    ).filter(Boolean)
   )
   </script>
   
