@@ -2,17 +2,20 @@
 import OpenJSON from './components/OpenJSON.vue'
 import ToggleMessage from './components/ToggleMessage.vue'
 import AuthorsHighlight from './components/AuthorsHighlight.vue'
+import Form from './components/Form.vue'
 
 </script>
 
 <template>
-    <AuthorsHighlight />
+    <!-- <AuthorsHighlight />
 
 <div id="app">
     <OpenJSON />
   </div>
-  <ToggleMessage />
-  
+  <ToggleMessage /> -->
+  <div id="app">
+    <Form />
+  </div>
 </template>
 
 <style scoped></style>
