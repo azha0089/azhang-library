@@ -1,11 +1,11 @@
 import { fileURLToPath, URL } from 'node:url'
-
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/azhang-library/',  // ✅ 关键修改：告诉 Vite 部署路径
   plugins: [
     vue(),
     vueDevTools(),
