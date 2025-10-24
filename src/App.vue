@@ -1,23 +1,40 @@
 <script setup>
-import OpenJSON from './components/OpenJSON.vue'
-import ToggleMessage from './components/ToggleMessage.vue'
-import AuthorsHighlight from './components/AuthorsHighlight.vue'
-import Form from './components/Form.vue'
-
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-    <!-- <AuthorsHighlight />
-
-<div id="app">
-    <OpenJSON />
-  </div>
-  <ToggleMessage /> -->
   <div id="app">
-    <Form />
+    <nav class="navbar">
+      <RouterLink to="/" class="nav-link">Home</RouterLink>
+      <RouterLink to="/FireLogin" class="nav-link">Firebase Login</RouterLink>
+      <RouterLink to="/GetBookCount" class="nav-link">Get Book Count</RouterLink>
+      <!-- ✅ 新增 Weather 页面导航 -->
+      <RouterLink to="/WeatherCheck" class="nav-link">Get Weather</RouterLink>
+      <RouterLink to="/CurrentWeather" class="nav-link">Current Weather</RouterLink>
+
+    </nav>
+
+    <RouterView />
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 12px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
 
+.nav-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
 
+.nav-link:hover {
+  text-decoration: underline;
+}
+</style>
